@@ -8,23 +8,23 @@ const Header = props => {
   return (
     <nav className="navbar navbar-inverse navbar-expand-sm navbar-darl bg-danger mb-3 py-0">
       <div className="container">
-        <a href="/contactmanager" className="navbar-brand">
+        <a style={style} href="/contactmanager" className="navbar-brand">
           {branding}
         </a>
         <div>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to="/contactmanager" className="nav-link">
+              <Link style={style} to="/contactmanager" className="nav-link">
                 <i className="fas fa-home" /> Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact/add" className="nav-link">
+              <Link style={style} to="/contact/add" className="nav-link">
                 <i className="fas fa-plus" /> Add
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link">
+              <Link style={style} to="/about" className="nav-link">
                 <i className="fas fa-question" /> About
               </Link>
             </li>
@@ -41,6 +41,10 @@ Header.defaultProps = {
 
 Header.propTypes = {
   branding: PropTypes.string.isRequired
+};
+
+const style = {
+  color: "#fff"
 };
 
 export default Header;
